@@ -1,0 +1,60 @@
+﻿body {
+	background-color: #DDD;
+}
+body,td,th {
+	font-family: Verdana, Geneva, sans-serif;
+	font-size: small;
+	color: #333;
+    text-align: center;
+}
+a {
+	font-size: small;
+	color: #333;
+}
+a:link {
+	text-decoration: none;
+}
+a:visited {
+	text-decoration: none;
+	color: #333;
+}
+a:hover {
+	text-decoration: underline;
+	color: #333;
+}
+a:active {
+	text-decoration: none;
+	color: #333;
+}
+.header
+{
+    background-color:#4692E6;
+    height:100px;
+    padding:30px;
+    font-size: x-large;
+    color: White;
+    vertical-align:middle;    
+}
+.introtext
+{
+    width: 300px;
+    azimuth:left;
+    text-align:left;
+    height: 343px;
+    padding:30px;
+}
+.loginbody
+{
+    width: 320px;
+    height: 200px;
+    background-color:Silver;
+    text-align:left;
+}
+.bordiv
+{
+    border-width:1px;
+    border-style:solid;
+    border-color:#CCCCCC;
+    padding:10px;
+    vertical-align:middle;
+}

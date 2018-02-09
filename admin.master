@@ -1,0 +1,102 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="admin.master.cs" Inherits="admin" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title>Admin - Library Management System</title>
+    <asp:ContentPlaceHolder id="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <link rel="stylesheet" type="text/css" href="CSS/LibraryStyle.css" />
+    <style type="text/css">
+        .style1
+        {
+            width: 800px;
+            background-color: #FFFFFF;
+        }
+        .style2
+        {
+            width: 100%;
+        }
+        .style3
+        {
+            width: 208px;
+        }
+        .style4
+        {
+            text-align: left;
+        }
+     </style>
+</head>
+<body>
+    <form id="form1" runat="server">
+    <table align="center" cellpadding="2" cellspacing="0" class="style1">
+        <tr>
+            <td>
+                <div class="header"><br />Library Management System<br /></div></td>
+        </tr>
+        <tr><td class=style4><div class="bordiv">Welcome 
+            <asp:Label ID="Label1" runat="server" ForeColor="#0066FF"></asp:Label> !!
+            &nbsp;&nbsp;&nbsp;&nbsp;
+            <asp:HyperLink ID="HyperLink1" runat="server" NavigateUrl="~/Logout.aspx">Logout</asp:HyperLink></div>
+        </td>
+        </tr>
+        <tr>
+            <td>
+                <table class="style2">
+                    <tr>
+                        <td class="style3">
+                            <asp:TreeView ID="TreeView1" runat="server" ImageSet="BulletedList2" 
+                                ShowExpandCollapse="False">
+                                <HoverNodeStyle Font-Underline="True" ForeColor="#5555DD" />
+                                <Nodes>
+                                    <asp:TreeNode NavigateUrl="~/adminhome.aspx" Text="Home" Value="Home">
+                                    </asp:TreeNode>
+                                    <asp:TreeNode Expanded="True" Text="Inventory" Value="Inventory">
+                                        <asp:TreeNode NavigateUrl="~/AddArcticle.aspx" Text="Add Article" 
+                                            Value="Add Article"></asp:TreeNode>
+                                        <asp:TreeNode Text="List Articles" Value="List Articles">
+                                            <asp:TreeNode NavigateUrl="~/ListBooks.aspx" Text="Books" Value="Books">
+                                            </asp:TreeNode>
+                                            <asp:TreeNode NavigateUrl="~/ListCDs.aspx" Text="CDs" Value="CDs">
+                                            </asp:TreeNode>
+                                            <asp:TreeNode NavigateUrl="~/ListMagazines.aspx" Text="Magazines" 
+                                                Value="Magazines"></asp:TreeNode>
+                                        </asp:TreeNode>
+                                    </asp:TreeNode>
+                                    <asp:TreeNode Expanded="True" Text="Transaction" Value="Transaction">
+                                        <asp:TreeNode NavigateUrl="~/IssueArticle.aspx" Text="Issue Article" 
+                                            Value="Issue Book"></asp:TreeNode>
+                                        <asp:TreeNode Text="Return Article" Value="Return Book" 
+                                            NavigateUrl="~/ReturnArticle.aspx"></asp:TreeNode>
+                                        <asp:TreeNode Text="Fine Calculation" Value="Fine Calculation" 
+                                            NavigateUrl="~/FineCalculation.aspx"></asp:TreeNode>
+                                    </asp:TreeNode>
+                                </Nodes>
+                                <NodeStyle Font-Names="Tahoma" Font-Size="10pt" ForeColor="Black" 
+                                    HorizontalPadding="5px" NodeSpacing="0px" VerticalPadding="0px" />
+                                <ParentNodeStyle Font-Bold="False" />
+                                <SelectedNodeStyle Font-Underline="True" ForeColor="#5555DD" 
+                                    HorizontalPadding="0px" VerticalPadding="0px" />
+                            </asp:TreeView>
+                        </td>
+                        <td><div class="bordiv">
+        <asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server">
+        </asp:ContentPlaceHolder></div>
+                        </td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <hr /></td>
+        </tr>
+        <tr>
+            <td>
+                &copy; 2010 [library.init.co.in] Library Management System</td>
+        </tr>
+    </table>
+    </form>
+</body>
+</html>
